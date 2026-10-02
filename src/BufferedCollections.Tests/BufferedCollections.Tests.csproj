@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFrameworks>net10.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+	<IsTestProject>true</IsTestProject>
+	<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\BufferedCollections\BufferedCollections.csproj" />
+	</ItemGroup>
+
+</Project>

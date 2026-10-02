@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<IsPackable>true</IsPackable>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>SA1611;CS1591</NoWarn>
+		<IsTrimmable>true</IsTrimmable>
+		<EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+		<VerifyReferenceTrimCompatibility>true</VerifyReferenceTrimCompatibility>
+
+		<!-- NuGet Package Metadata -->
+		<Version>0.1.0</Version>
+		<PackageId>Eryri.BufferedCollections</PackageId>
+		<Authors>Osian Linton</Authors>
+		<Description>Adaptive weak object pools for bursty temporary allocations.</Description>
+		<PackageTags>pooling;collections;buffers;performance;allocations;gc</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/EryriSoftware/BufferedCollections</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/EryriSoftware/BufferedCollections</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="System.Buffers" />
+	</ItemGroup>
+
+</Project>
